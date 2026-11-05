@@ -24,7 +24,15 @@ namespace RestaurantApp
             {
                 Console.WriteLine($"ID: {r.Id} | Name: {r.Name} | Type: {r.Type} | Rating: {r.Rating}");
             }
-    }
+            int totalRestaurants = restaurants.Count;
+            double averageRating = restaurants.Average(r => r.Rating);
+
+            Console.WriteLine("-----------------------------------");
+            Console.WriteLine($"จำนวนร้านทั้งหมด: {totalRestaurants} ร้าน");
+            Console.WriteLine($"คะแนนเฉลี่ยทั้งหมด: {averageRating:F2}");
+
+            Console.ReadLine();
+        }
 }
 
     public class Restaurant
