@@ -10,8 +10,12 @@ namespace RestaurantApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("SIT1/1");
-            Console.WriteLine("week2");
+            List<Restaurant> restaurants = new List<Restaurant>
+            {
+                new Restaurant(1, "Quanjude Roast Duck", "Beijing Cuisine", 4.5),
+                new Restaurant(2, "Donglaishun Hot Pot", "Hot Pot", 4.6),
+                new Restaurant(3, "Din Tai Fung", "Taiwanese Cuisine", 4.7)
+            };
         }
     }
 }
@@ -24,12 +28,12 @@ public class Restaurant
 
     public double Rating { get; set; }
 
-    public Restaurant(int id,string name,string type double rate) 
+    public Restaurant(int id,string name,string type ,double rateing) 
     {
         this.Id = id;
         this.Name = name;
         this.Type = type;
-        this.Rating = rate;
+        this.Rating = rateing;
     }
 
 }
